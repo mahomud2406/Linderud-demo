@@ -22,23 +22,22 @@ Innholdet ligger som enkle tekstfiler, og styret kan oppdatere det selv uten tek
 
 ## Kilder
 
-Innholdet er hentet fra dagens nettside, linderudbo.no. Organisasjonsnummer, postadresse og telefonnummeret til forretningsfører er hentet fra offentlige registre. Hver temaside lenker til siden innholdet kommer fra.
+Alt innhold er hentet fra dagens nettside, linderudbo.no (www.linderudbo.no). Bilder og dokumenter (PDF og Word) er kopiert fra linderudbo.no og ligger på denne nettsiden. Hver temaside lenker til siden innholdet kommer fra.
 
 Sidene på dagens nettside:
 
-- [Linderud Borettslag II](http://www.linderudbo.no/L2/)
+- [Linderud Fellesstyre](http://linderudbo.no/index1.html)
+- [Linderud Borettslag II](http://linderudbo.no/L2/)
+- [Adresser og kontakter](http://linderudbo.no/L2/LB2-Adresser.html)
 - [Garasjer og parkering](http://linderudbo.no/L2/Garasjer-Parkering.html)
-- [Parkeringsplasser](http://www.linderudbo.no/L2/Parkeringsplasser.html)
-- [Gjesteparkering](http://linderudbo.no/L2/Parkering_Gjester_Skilt.html)
-- [Vaskeri](http://linderudbo.no/L2/Vaskeri.html)
+- [EL-bil lading](http://linderudbo.no/L2/EL_Bil.html)
+- [Vaskerier](http://linderudbo.no/L2/Vaskeri.html)
+- [Ordensregler](http://linderudbo.no/L2/Ordensregler_2026-04-14.html)
+- [Vedtekter](http://linderudbo.no/L2/Vedtekter_2026-04-14.html)
+- [TV-pakke fellesavtale](http://linderudbo.no/TV/TV_Fellesavtale.html)
 - [Linderud TV-anlegg](http://linderudbo.no/TV/)
-- [TV: Aktuelt](http://linderudbo.no/TV/aktuelt.html)
-- [TV: Kanaloversikt](http://www.linderudbo.no/TV/LFA_TV-Radio.html)
-- [TV: Fellesavtale](http://www.linderudbo.no/TV/TV_Fellesavtale.html)
-- [TV: Digitalisering](http://www.linderudbo.no/TV/LFA_TV-CanalDigital.html)
-- [TV: DTT-info](http://linderudbo.no/TV/LFA_dtt.html)
-- [Linderud INFO-kanal](http://www.linderudbo.no/INFO/)
-- [Internett via fibernett](http://linderudbo.no/BB/)
-- [Bredbånd på Linderud](http://www.linderudbo.no/BB/bredband.html)
-- [Linderud-3: Radio og TV](http://www.linderudbo.no/L3/L3-TV-Radio.html)
-- [Nordberg Eiendomsforvaltning](http://www.linderudbo.no/Nordberg.html)
+- [TV: Kanaloversikt](http://linderudbo.no/TV/LFA_TV-Radio.html)
+- [TV og Internet: Driftsmeldinger & Status](http://linderudbo.no/TV/aktuelt.html)
+- [Internet via fibernett](http://linderudbo.no/BB/)
+- [Varmemåling](http://linderudbo.no/ISTA/)
+- [Nordberg Eiendomsforvaltning](http://linderudbo.no/Nordberg.html)

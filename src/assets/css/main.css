@@ -439,6 +439,52 @@ main:focus {
   font-weight: 700;
 }
 
+.home-panel-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "intro" "photo" "actions";
+}
+
+.home-intro {
+  grid-area: intro;
+}
+
+.home-photo {
+  grid-area: photo;
+  margin: 1.1rem 0 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 18%);
+  aspect-ratio: 1024 / 318;
+  background: var(--primary-strong);
+}
+
+.home-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-panel-grid .quick-actions {
+  grid-area: actions;
+}
+
+@media (min-width: 60rem) {
+  .home-panel-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    grid-template-areas:
+      "intro photo"
+      "actions photo";
+    column-gap: 2.5rem;
+    align-items: start;
+  }
+
+  .home-photo {
+    margin-top: 0.5rem;
+  }
+}
+
 .quick-actions {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1086,6 +1132,20 @@ main:focus {
 
 .prose li::marker {
   color: var(--primary);
+}
+
+.prose figure {
+  margin: 1.25rem 0;
+}
+
+.prose figure.figure-small {
+  max-width: 18rem;
+}
+
+.prose figcaption {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .prose img {

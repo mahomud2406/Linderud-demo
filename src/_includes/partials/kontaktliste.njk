@@ -1,5 +1,6 @@
 <ul class="contact-list" role="list">
   {%- for k in kontakter.personer %}
+  {%- if k.forside !== false %}
   <li>
     <div class="contact-row">
       <span class="avatar"><svg class="icon" aria-hidden="true"><use href="#{{ k.ikon }}"/></svg></span>
@@ -13,5 +14,6 @@
       </div>
     </div>
   </li>
+  {%- endif %}
   {%- endfor %}
 </ul>

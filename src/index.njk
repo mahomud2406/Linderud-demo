@@ -5,10 +5,16 @@ bodyClass: home
 ---
 <section class="home-hero" aria-labelledby="borettslaget">
   <div class="home-panel">
-    <div class="container">
-      <h1 id="borettslaget">{{ site.borettslag }}</h1>
-      <p class="home-address">{{ site.adresseKort }}</p>
-      <a class="home-more" href="/temaer/borettslaget/">Om borettslaget</a>
+    <div class="container home-panel-grid">
+      <div class="home-intro">
+        <h1 id="borettslaget">{{ site.borettslag }}</h1>
+        <p class="home-address">{{ site.adresseKort }}</p>
+        <a class="home-more" href="/temaer/borettslaget/">Om borettslaget</a>
+      </div>
+
+      <figure class="home-photo">
+        <img src="/assets/img/LBR2.jpg" alt="De fire boligblokkene i Linderud Borettslag II" width="1024" height="318" fetchpriority="high">
+      </figure>
 
       <ul class="quick-actions" role="list">
         {%- for k in hurtigknapper %}
@@ -63,7 +69,7 @@ bodyClass: home
       <section class="sheet" aria-labelledby="dok-tittel">
         <h2 id="dok-tittel" class="section-title">Dokumenter <a href="/dokumenter/">Se alle</a></h2>
         <ul class="doc-list" role="list">
-          {%- for d in [dokumenter[0].dokumenter[0], dokumenter[1].dokumenter[0], dokumenter[2].dokumenter[0]] %}
+          {%- for d in [dokumenter[0].dokumenter[0], dokumenter[5].dokumenter[0], dokumenter[3].dokumenter[0], dokumenter[4].dokumenter[0]] %}
           {% include "partials/dokument.njk" %}
           {%- endfor %}
         </ul>
