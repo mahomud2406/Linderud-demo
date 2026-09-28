@@ -410,28 +410,14 @@ main:focus {
   color: #fff;
 }
 
-.home-photo {
-  display: block;
-  width: 100%;
-  height: clamp(12rem, 30vw, 17rem);
-  object-fit: cover;
-  object-position: center 70%;
+.home-panel {
+  padding-block: 2rem 3.75rem;
 }
 
 @media (min-width: 60rem) {
-  .home-photo-wrap {
-    max-width: var(--container);
-    margin-inline: auto;
-    padding: 1.5rem var(--gutter) 0;
+  .home-panel {
+    padding-top: 3rem;
   }
-
-  .home-photo {
-    border-radius: var(--radius);
-  }
-}
-
-.home-panel {
-  padding-block: 1.5rem 3.75rem;
 }
 
 .home-panel h1 {

@@ -1,6 +1,6 @@
 ---
 title: Garasjer og parkering
-ingress: Borettslaget leier ut garasjer og faste parkeringsplasser til andelseierne.
+ingress: Borettslaget har 173 garasjer, 100 faste parkeringsplasser og 19 plasser for gjesteparkering.
 ikon: i-bil
 kort: Garasjer, faste plasser og elbil
 rekkefolge: 1
@@ -22,18 +22,18 @@ kilde: http://linderudbo.no/L2/Garasjer-Parkering.html
 
 <h2 id="elbil">Elbil</h2>
 
-Vil du lade elbilen hjemme, kan du leie en garasje med tilkobling for elbillader. Den koster 350 kr i måneden, pluss 10 000 kr i refunderbart innskudd.
+Garasje med tilkobling for elbillader koster 350 kr/mnd, samt 10 000 kr i refunderbart innskudd.
 
 ## Faste parkeringsplasser
 
-Andelseiere som ønsker å parkere på borettslagets område, må leie fast parkeringsplass.
+Andelseiere i Linderud Borettslag II som ønsker å parkere kjøretøyet sitt på borettslagets område, er pålagt å leie fast parkeringsplass.
 
-## Slik leier du garasje eller parkeringsplass
+## Kontakt
 
-Send en e-post til styret på [{{ kontakter.styretEpost }}](mailto:{{ kontakter.styretEpost }}) og fortell hva du ønsker å leie.
+Garasjer og parkering: [{{ kontakter.styretEpost }}](mailto:{{ kontakter.styretEpost }})
 
 ## Gjester
 
-Gjester parkerer på egne gjesteplasser. Les mer om [gjesteparkering](/temaer/gjesteparkering/).
+Se [gjesteparkering](/temaer/gjesteparkering/).
 
 Mer på dagens nettside: [Parkeringsplasser](http://www.linderudbo.no/L2/Parkeringsplasser.html)

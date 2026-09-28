@@ -3,9 +3,9 @@
     "id": "regelverk",
     "tittel": "Regelverk",
     "dokumenter": [
-      { "tittel": "Regelverk for Linderud Borettslag II", "info": "Gjeldende, pr. 8. april 2025", "url": "http://www.linderudbo.no/L2/LBR2-Regelverk_2025-04-08.pdf", "type": "PDF" },
-      { "tittel": "Regelverk pr. 18. mai 2021", "info": "Tidligere utgave", "url": "http://www.linderudbo.no/L2/LBR2-Regelverk_2021-05-18.pdf", "type": "PDF" },
-      { "tittel": "Regelverk pr. 17. januar 2009", "info": "Tidligere utgave", "url": "http://www.linderudbo.no/L2/LB2-Regelverk_2009-01-17.pdf", "type": "PDF" }
+      { "tittel": "Regelverk for Linderud Borettslag II", "info": "Pr. 8. april 2025", "url": "http://www.linderudbo.no/L2/LBR2-Regelverk_2025-04-08.pdf", "type": "PDF" },
+      { "tittel": "Regelverk pr. 18. mai 2021", "url": "http://www.linderudbo.no/L2/LBR2-Regelverk_2021-05-18.pdf", "type": "PDF" },
+      { "tittel": "Regelverk pr. 17. januar 2009", "url": "http://www.linderudbo.no/L2/LB2-Regelverk_2009-01-17.pdf", "type": "PDF" }
     ]
   },
   {
@@ -23,23 +23,23 @@
     "ingress": "Ordinær generalforsamling holdes hvert år innen 30. april.",
     "dokumenter": [
       { "tittel": "Protokoll fra generalforsamlingen 16. april 2024", "url": "http://www.linderudbo.no/L2/LBR2-GF2024-04-16_Protokoll_web.pdf", "type": "PDF" },
-      { "tittel": "Innkalling til generalforsamlingen 2021", "url": "http://www.linderudbo.no/L2/LBR2_GF2021_Innkalling_us.pdf", "type": "PDF" },
-      { "tittel": "Stemmetall fra generalforsamlingen 2021", "url": "http://linderudbo.no/L2/LBR2_GF2021_Stemmettall.pdf", "type": "PDF" }
+      { "tittel": "Generalforsamling 2021 – innkalling", "url": "http://www.linderudbo.no/L2/LBR2_GF2021_Innkalling_us.pdf", "type": "PDF" },
+      { "tittel": "Generalforsamling 2021 – stemmetall", "url": "http://linderudbo.no/L2/LBR2_GF2021_Stemmettall.pdf", "type": "PDF" }
     ]
   },
   {
     "id": "skjemaer",
     "tittel": "Skjemaer og veiledninger",
     "dokumenter": [
-      { "tittel": "Oppussing av bad – søknad til styret", "url": "http://www.linderudbo.no/L2/LB2_Baderom_Renovering.pdf", "type": "PDF" },
-      { "tittel": "EasyPayment – brukerveiledning for vaskeriet", "url": "http://www.linderudbo.no/L2/EasyPayment_brukerveiledning_LB2.pdf", "type": "PDF" }
+      { "tittel": "Renovering av baderom (fra styret)", "url": "http://www.linderudbo.no/L2/LB2_Baderom_Renovering.pdf", "type": "PDF" },
+      { "tittel": "EasyPayment – brukerveiledning (vaskeriet)", "url": "http://www.linderudbo.no/L2/EasyPayment_brukerveiledning_LB2.pdf", "type": "PDF" }
     ]
   },
   {
     "id": "tv-internett",
     "tittel": "TV og internett",
     "dokumenter": [
-      { "tittel": "Get Box – brukerveiledning", "url": "http://www.linderudbo.no/TV/GetboX.pdf", "type": "PDF" },
+      { "tittel": "Get Box", "url": "http://www.linderudbo.no/TV/GetboX.pdf", "type": "PDF" },
       { "tittel": "Velkomstbrev fra Get", "url": "http://www.linderudbo.no/TV/Get_Velkomstbrev.pdf", "type": "PDF" },
       { "tittel": "Bredbånd på Linderud", "url": "http://www.linderudbo.no/BB/LB-Bredband.doc", "type": "Word" }
     ]

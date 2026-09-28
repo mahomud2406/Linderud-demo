@@ -20,9 +20,11 @@ Nettsiden bruker ikke informasjonskapsler (cookies), analyseverktøy eller innho
 
 Innholdet ligger som enkle tekstfiler, og styret kan oppdatere det selv uten teknisk kompetanse. Endringer publiseres automatisk etter et par minutter.
 
-## Sider fra dagens nettside
+## Kilder
 
-Alt innholdet er hentet fra dagens nettside. Her er de opprinnelige sidene:
+Innholdet er hentet fra dagens nettside, linderudbo.no. Organisasjonsnummer, postadresse og telefonnummeret til forretningsfører er hentet fra offentlige registre. Hver temaside lenker til siden innholdet kommer fra.
+
+Sidene på dagens nettside:
 
 - [Linderud Borettslag II](http://www.linderudbo.no/L2/)
 - [Garasjer og parkering](http://linderudbo.no/L2/Garasjer-Parkering.html)
@@ -34,6 +36,7 @@ Alt innholdet er hentet fra dagens nettside. Her er de opprinnelige sidene:
 - [TV: Kanaloversikt](http://www.linderudbo.no/TV/LFA_TV-Radio.html)
 - [TV: Fellesavtale](http://www.linderudbo.no/TV/TV_Fellesavtale.html)
 - [TV: Digitalisering](http://www.linderudbo.no/TV/LFA_TV-CanalDigital.html)
+- [TV: DTT-info](http://linderudbo.no/TV/LFA_dtt.html)
 - [Linderud INFO-kanal](http://www.linderudbo.no/INFO/)
 - [Internett via fibernett](http://linderudbo.no/BB/)
 - [Bredbånd på Linderud](http://www.linderudbo.no/BB/bredband.html)

@@ -31,7 +31,7 @@ layout: layouts/base.njk
 
     {%- if kilde %}
     <p class="page-meta" data-pagefind-ignore>
-      Hentet fra <a href="{{ kilde }}">dagens nettside</a>{% if oppdatert %} · sist oppdatert <time datetime="{{ oppdatert | isoDato }}">{{ oppdatert | norskDato }}</time>{% endif %}
+      Kilde: <a href="{{ kilde }}">{{ kilde | replace("http://", "") }}</a>{% if oppdatert %} · sist oppdatert <time datetime="{{ oppdatert | isoDato }}">{{ oppdatert | norskDato }}</time>{% endif %}
     </p>
     {%- endif %}
   </article>
