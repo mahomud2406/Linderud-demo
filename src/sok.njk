@@ -1,0 +1,37 @@
+---
+layout: layouts/page.njk
+title: Søk
+ingress: Søk i all informasjon på nettsiden.
+permalink: /sok/
+bodyClass: search-page
+eleventyExcludeFromCollections: true
+---
+<div id="sok" class="search-page"></div>
+<noscript><p>Søket krever at JavaScript er slått på i nettleseren.</p></noscript>
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const ui = new PagefindUI({
+      element: "#sok",
+      baseUrl: "{{ '/' | url }}",
+      showSubResults: true,
+      showImages: false,
+      resetStyles: false,
+      translations: {
+        placeholder: "Hva leter du etter?",
+        clear_search: "Tøm",
+        load_more: "Vis flere treff",
+        search_label: "Søk på siden",
+        zero_results: "Ingen treff for [SEARCH_TERM]",
+        many_results: "[COUNT] treff for [SEARCH_TERM]",
+        one_result: "[COUNT] treff for [SEARCH_TERM]",
+        searching: "Søker etter [SEARCH_TERM] …"
+      }
+    });
+    const q = new URLSearchParams(location.search).get("q");
+    if (q) ui.triggerSearch(q);
+    const input = document.querySelector("#sok input");
+    if (input) input.focus();
+  });
+</script>

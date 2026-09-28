@@ -1,0 +1,86 @@
+---
+layout: layouts/base.njk
+---
+{%- set navKey = eleventyNavigation.key if eleventyNavigation else "" -%}
+{%- set smuler = collections.all | eleventyNavigationBreadcrumb(navKey) if navKey else [] -%}
+{%- set undersider = collections.all | eleventyNavigation(navKey) if navKey else [] -%}
+{%- set seksjonKey = smuler[0].key if smuler | length else navKey -%}
+{%- set seksjon = collections.all | eleventyNavigation(seksjonKey) if seksjonKey else [] -%}
+
+<div class="container page-layout{% if seksjon | length %} has-aside{% endif %}">
+  <article class="page-main"{% if not eleventyExcludeFromCollections %} data-pagefind-body{% endif %}>
+    {%- if smuler | length %}
+    <nav class="breadcrumbs" aria-label="Brødsmulesti" data-pagefind-ignore>
+      <ol>
+        <li><a href="/">Forside</a></li>
+        {%- for s in smuler %}
+        <li><a href="{{ s.url }}">{{ s.title }}</a></li>
+        {%- endfor %}
+      </ol>
+    </nav>
+    {%- endif %}
+
+    <header class="page-header">
+      <h1>{{ title }}</h1>
+      {%- if ingress %}
+      <p class="lead">{{ ingress }}</p>
+      {%- endif %}
+    </header>
+
+    {%- if overfores %}
+    <div class="callout callout-pending" role="note">
+      <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>
+      <div>
+        <p><strong>Innholdet på denne siden overføres fra dagens nettside.</strong></p>
+        {%- if kilder %}
+        <p>Til da finner du informasjonen her:</p>
+        <ul>
+          {%- for k in kilder %}
+          <li><a href="{{ k.url }}">{{ k.tittel }}</a></li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+      </div>
+    </div>
+    {%- endif %}
+
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+
+    {%- if undersider | length %}
+    <ul class="card-grid card-grid-compact" role="list">
+      {%- for u in undersider %}
+      <li>
+        <a class="card card-link" href="{{ u.url }}">
+          <span class="card-title">{{ u.title }}</span>
+          {%- if u.excerpt %}<span class="card-text">{{ u.excerpt }}</span>{% endif %}
+          <svg class="icon card-arrow" aria-hidden="true"><use href="#i-pil"/></svg>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    {%- if oppdatert %}
+    <p class="page-meta">
+      <svg class="icon icon-inline" aria-hidden="true"><use href="#i-kalender"/></svg>
+      Sist oppdatert <time datetime="{{ oppdatert | isoDato }}">{{ oppdatert | norskDato }}</time>
+    </p>
+    {%- endif %}
+  </article>
+
+  {%- if seksjon | length %}
+  <aside class="page-aside" aria-label="Flere sider i {{ smuler[0].title if smuler | length else title }}">
+    <nav class="section-nav">
+      {%- set seksjonTopp = smuler[0] if smuler | length else { url: page.url, title: title } %}
+      <p class="section-nav-title"><a href="{{ seksjonTopp.url }}"{% if page.url == seksjonTopp.url %} aria-current="page"{% endif %}>{{ seksjonTopp.title }}</a></p>
+      <ul>
+        {%- for s in seksjon %}
+        <li><a href="{{ s.url }}"{% if page.url == s.url %} aria-current="page"{% endif %}>{{ s.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </aside>
+  {%- endif %}
+</div>

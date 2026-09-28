@@ -1,0 +1,41 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <section aria-labelledby="footer-om">
+      <h2 id="footer-om" class="footer-heading">{{ site.borettslag }}</h2>
+      <p>
+        <svg class="icon icon-inline" aria-hidden="true"><use href="#i-sted"/></svg>
+        {{ site.adresse }}
+      </p>
+      <p>Org.nr. {{ site.orgnr }}</p>
+    </section>
+
+    <section aria-labelledby="footer-kontakt">
+      <h2 id="footer-kontakt" class="footer-heading">Kontakt</h2>
+      <ul class="footer-links">
+        {%- for k in kontakter.personer %}
+        {%- if k.epost or k.telefon %}
+        <li>
+          <span class="footer-role">{{ k.rolle }}</span>
+          {%- if k.telefon %} <a href="tel:{{ k.telefon | telLenke }}">{{ k.telefon }}</a>{% endif %}
+          {%- if k.epost %} <a href="mailto:{{ k.epost }}">{{ k.epost }}</a>{% endif %}
+        </li>
+        {%- endif %}
+        {%- endfor %}
+        <li><a href="/kontakt/">All kontaktinformasjon</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="footer-snarveier">
+      <h2 id="footer-snarveier" class="footer-heading">Snarveier</h2>
+      <ul class="footer-links">
+        {%- for s in snarveier %}
+        <li><a href="{{ s.url }}">{{ s.tittel }}</a></li>
+        {%- endfor %}
+      </ul>
+    </section>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {{ build.year }} {{ site.borettslag }}</p>
+    <p><a href="/om-nettsiden/">Om nettsiden</a></p>
+  </div>
+</footer>

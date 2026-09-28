@@ -1,0 +1,71 @@
+---
+layout: layouts/base.njk
+title: Forside
+bodyClass: home
+eleventyNavigation:
+  key: Forside
+  order: 0
+---
+<section class="hero">
+  <div class="container">
+    <h1>Velkommen til Linderud</h1>
+    <p>Her finner du informasjon for oss som bor i {{ site.borettslag }}: kontaktinfo, parkering, regelverk, dokumenter, TV og internett.</p>
+    <form class="hero-search" action="/sok/" method="get" role="search">
+      <label class="visually-hidden" for="hero-q">Søk på siden</label>
+      <input id="hero-q" name="q" type="search" placeholder="Hva leter du etter?" autocomplete="off">
+      <button type="submit">
+        <svg class="icon" aria-hidden="true"><use href="#i-sok"/></svg>
+        Søk
+      </button>
+    </form>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="snarveier">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="snarveier">Snarveier</h2>
+    </div>
+    <ul class="card-grid card-grid-shortcuts" role="list">
+      {%- for s in snarveier %}
+      <li>
+        <a class="card card-link" href="{{ s.url }}">
+          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#{{ s.ikon }}"/></svg></span>
+          <span class="card-title">{{ s.tittel }}</span>
+          <span class="card-text">{{ s.tekst }}</span>
+          <svg class="icon card-arrow" aria-hidden="true"><use href="#i-pil"/></svg>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+{%- if collections.nyheter | length %}
+<section class="section section-alt" aria-labelledby="oppslag">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="oppslag">Oppslag</h2>
+    </div>
+    <ul class="news-list" role="list">
+      {%- for n in collections.nyheter | head(5) %}
+      <li class="news-item">
+        <time datetime="{{ n.date | isoDato }}">{{ n.date | norskDato }}</time>
+        <h3><a href="{{ n.url }}">{{ n.data.title }}</a></h3>
+        {%- if n.data.ingress %}<p>{{ n.data.ingress }}</p>{% endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section{% if not (collections.nyheter | length) %} section-alt{% endif %}" aria-labelledby="kontakt-oss">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="kontakt-oss">Kontakt oss</h2>
+      <a href="/kontakt/">All kontaktinformasjon <svg class="icon icon-inline" aria-hidden="true"><use href="#i-pil"/></svg></a>
+    </div>
+    {% include "partials/kontaktkort.njk" %}
+  </div>
+</section>

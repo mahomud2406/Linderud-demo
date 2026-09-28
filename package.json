@@ -1,0 +1,21 @@
+{
+  "name": "linderudbo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ny nettside for Linderud Borettslag II (linderudbo.no)",
+  "type": "module",
+  "scripts": {
+    "build": "eleventy && pagefind --site _site",
+    "start": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahomud2406/Linderud-demo.git"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-navigation": "^1.0.5",
+    "pagefind": "^1.5.2"
+  }
+}

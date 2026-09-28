@@ -1,0 +1,28 @@
+{
+  "personer": [
+    {
+      "rolle": "Styret",
+      "navn": "",
+      "beskrivelse": "Styret har ansvaret for driften av borettslaget.",
+      "telefon": "",
+      "epost": "",
+      "ikon": "i-personer"
+    },
+    {
+      "rolle": "Vaktmester",
+      "navn": "",
+      "beskrivelse": "Kontakt vaktmester ved feil og mangler i fellesarealer og bygg.",
+      "telefon": "",
+      "epost": "",
+      "ikon": "i-verktoy"
+    },
+    {
+      "rolle": "Forretningsfører",
+      "navn": "",
+      "beskrivelse": "Forretningsfører tar seg av økonomi, felleskostnader og eierskifte.",
+      "telefon": "",
+      "epost": "",
+      "ikon": "i-bygning"
+    }
+  ]
+}

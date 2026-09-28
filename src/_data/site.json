@@ -1,0 +1,13 @@
+{
+  "name": "Linderudbo",
+  "tagline": "Informasjon for beboerne på Linderud",
+  "description": "Informasjon for beboerne i Linderud Borettslag II: kontaktinfo, parkering og garasjer, regelverk, dokumenter, TV og internett.",
+  "lang": "nb",
+  "locale": "nb_NO",
+  "borettslag": "Linderud Borettslag II",
+  "adresse": "Erich Mogensøns vei 14–36, 0594 Oslo",
+  "orgnr": "955 592 611",
+  "gammelSide": "http://linderudbo.no",
+  "repo": "https://github.com/mahomud2406/Linderud-demo",
+  "demo": true
+}
