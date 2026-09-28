@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - claude/linderudbo-upgrade-9ejghv
   workflow_dispatch:
 
 permissions:
