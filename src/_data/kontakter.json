@@ -1,27 +1,43 @@
 {
+  "styretEpost": "LB2@Linderudbo.no",
   "personer": [
     {
+      "id": "styret",
       "rolle": "Styret",
       "navn": "",
-      "beskrivelse": "Styret har ansvaret for driften av borettslaget.",
+      "beskrivelse": "Spørsmål om borettslaget, garasjer og faste parkeringsplasser, oppussing og søknader.",
       "telefon": "",
-      "epost": "",
+      "epost": "LB2@Linderudbo.no",
       "ikon": "i-personer"
     },
     {
+      "id": "vaktmester",
       "rolle": "Vaktmester",
-      "navn": "",
-      "beskrivelse": "Kontakt vaktmester ved feil og mangler i fellesarealer og bygg.",
-      "telefon": "",
-      "epost": "",
+      "navn": "Pål Schøyen",
+      "beskrivelse": "Feil og mangler, gjesteparkeringskort og ID-kort til vaskeriet. Ferievikarer fra Vaktmesterdrift AS bruker samme telefon og e-post.",
+      "telefon": "971 99923",
+      "telefonMerknad": "SMS/telefon",
+      "epost": "Vaktmester-L2@Linderudbo.no",
       "ikon": "i-verktoy"
     },
     {
+      "id": "tv-internett",
+      "rolle": "TV og internett",
+      "navn": "Tore Botne",
+      "beskrivelse": "Kontaktperson for TV-anlegget og fibernettet.",
+      "telefon": "906 46694",
+      "telefonMerknad": "SMS/telefon",
+      "epost": "tv@Linderudbo.no",
+      "ikon": "i-tv"
+    },
+    {
+      "id": "forretningsforer",
       "rolle": "Forretningsfører",
-      "navn": "",
-      "beskrivelse": "Forretningsfører tar seg av økonomi, felleskostnader og eierskifte.",
-      "telefon": "",
-      "epost": "",
+      "navn": "Nordberg Eiendomsforvaltning AS",
+      "beskrivelse": "Felleskostnader, økonomi og eierskifte. Erich Mogensøns vei 12, 0594 Oslo.",
+      "telefon": "22 64 61 20",
+      "epost": "post@nordberg-eiendom.no",
+      "nettside": "https://www.nordberg-eiendom.no/",
       "ikon": "i-bygning"
     }
   ]

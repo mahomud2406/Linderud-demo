@@ -1,4 +1,7 @@
 {
   "layout": "layouts/page.njk",
-  "tags": ["nyhet"]
+  "tags": ["nyhet"],
+  "fane": "Oppslag",
+  "tilbake": { "tekst": "Oppslag", "url": "/oppslag/" },
+  "permalink": "/oppslag/{{ page.fileSlug }}/"
 }

@@ -1,0 +1,18 @@
+---
+layout: layouts/page.njk
+utenArk: true
+title: Dokumenter
+ingress: Regelverk, årsberetninger, protokoller og skjemaer.
+permalink: /dokumenter/
+---
+{%- for gruppe in dokumenter %}
+<section class="sheet doc-group" id="{{ gruppe.id }}" aria-labelledby="{{ gruppe.id }}-tittel">
+  <h2 id="{{ gruppe.id }}-tittel">{{ gruppe.tittel }}</h2>
+  {%- if gruppe.ingress %}<p>{{ gruppe.ingress }}</p>{% endif %}
+  <ul class="doc-list" role="list">
+    {%- for d in gruppe.dokumenter %}
+    {% include "partials/dokument.njk" %}
+    {%- endfor %}
+  </ul>
+</section>
+{%- endfor %}

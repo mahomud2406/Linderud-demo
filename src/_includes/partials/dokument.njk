@@ -1,0 +1,10 @@
+<li>
+  <a href="{{ d.url }}">
+    <span class="doc-icon"><svg class="icon" aria-hidden="true"><use href="#i-dokument"/></svg></span>
+    <span>
+      <span class="doc-title">{{ d.tittel }}</span>
+      {%- if d.info %}<span class="doc-info">{{ d.info }}</span>{% endif %}
+    </span>
+    <span class="doc-type">{{ d.type }}</span>
+  </a>
+</li>

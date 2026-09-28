@@ -1,35 +1,32 @@
-{%- set hovedmeny = collections.all | eleventyNavigation -%}
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="/" aria-label="{{ site.name }} – til forsiden">
-      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
-        <rect width="40" height="40" rx="10" fill="currentColor"/>
-        <path d="M9 30V17l6-4 6 4v13M21 30V12l5-3 5 3v18M7 30h26" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-      </svg>
-      <span class="brand-text">
-        <span class="brand-name">{{ site.name }}</span>
-        <span class="brand-tagline">{{ site.borettslag }}</span>
-      </span>
+{%- if site.demo %}
+<div class="demo-ribbon" role="note">
+  <div class="container">Forslag til ny nettside for {{ site.borettslag }}. Dagens side: <a href="{{ site.gammelSide }}">linderudbo.no</a></div>
+</div>
+{%- endif %}
+<header class="appbar">
+  <div class="container appbar-inner">
+    <a class="wordmark" href="/" aria-label="{{ site.tittel }} – til forsiden">
+      <svg class="wordmark-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27V14l7-5 7 5v13M19 27V9l4-3 4 3v18M3 27h26" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>{{ site.name }}</span>
     </a>
 
-    <div class="header-actions">
-      <a class="icon-button" href="/sok/" aria-label="Søk på siden">
-        <svg class="icon" aria-hidden="true"><use href="#i-sok"/></svg>
-      </a>
-      <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="hovedmeny">
-        <svg class="icon icon-open" aria-hidden="true"><use href="#i-meny"/></svg>
-        <svg class="icon icon-close" aria-hidden="true"><use href="#i-lukk"/></svg>
-        <span class="menu-toggle-label">Meny</span>
-      </button>
-    </div>
-
-    <nav id="hovedmeny" class="main-nav" aria-label="Hovedmeny">
+    <nav class="topnav" aria-label="Hovedmeny">
       <ul>
-        {%- for entry in hovedmeny %}
-        {%- set aktiv = page.url == entry.url or (entry.url != "/" and page.url.startsWith(entry.url)) %}
-        <li><a href="{{ entry.url }}"{% if aktiv %} aria-current="{{ 'page' if page.url == entry.url else 'true' }}"{% endif %}>{{ entry.title }}</a></li>
+        {%- for item in meny %}
+        {%- set aktiv = (item.url == "/" and page.url == "/") or (item.url != "/" and page.url.startsWith(item.url)) or (fane == item.tittel) %}
+        <li><a href="{{ item.url }}"{% if aktiv %} aria-current="{{ 'page' if page.url == item.url else 'true' }}"{% endif %}>{{ item.tittel }}</a></li>
         {%- endfor %}
       </ul>
     </nav>
+
+    <div class="appbar-actions">
+      <a class="appbar-btn" href="/sok/" aria-label="Søk">
+        <svg class="icon" aria-hidden="true"><use href="#i-sok"/></svg>
+      </a>
+      <a class="appbar-btn appbar-bell" href="/oppslag/" aria-label="Oppslag">
+        <svg class="icon" aria-hidden="true"><use href="#i-bjelle"/></svg>
+        {%- if collections.nyheter | length %}<span class="appbar-dot" aria-hidden="true"></span>{% endif %}
+      </a>
+    </div>
   </div>
 </header>

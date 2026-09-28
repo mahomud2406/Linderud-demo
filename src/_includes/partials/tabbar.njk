@@ -1,0 +1,13 @@
+<nav class="tabbar" aria-label="Snarveier">
+  <ul>
+    {%- for item in meny %}
+    {%- set aktiv = (item.url == "/" and page.url == "/") or (item.url != "/" and page.url.startsWith(item.url)) or (fane == item.tittel) %}
+    <li>
+      <a href="{{ item.url }}"{% if aktiv %} aria-current="{{ 'page' if page.url == item.url else 'true' }}"{% endif %}>
+        <svg class="icon" aria-hidden="true"><use href="#{{ item.ikon }}"/></svg>
+        <span>{{ item.tittel }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</nav>

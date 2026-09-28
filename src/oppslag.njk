@@ -1,0 +1,20 @@
+---
+layout: layouts/page.njk
+utenArk: true
+title: Oppslag
+ingress: Beskjeder og nyheter fra styret.
+permalink: /oppslag/
+---
+{%- if collections.nyheter | length %}
+<ul class="news-list" role="list">
+  {%- for n in collections.nyheter %}
+  <li class="sheet">
+    <time datetime="{{ n.date | isoDato }}">{{ n.date | norskDato }}</time>
+    <h2><a href="{{ n.url }}">{{ n.data.title }}</a></h2>
+    {%- if n.data.ingress %}<p>{{ n.data.ingress }}</p>{% endif %}
+  </li>
+  {%- endfor %}
+</ul>
+{%- else %}
+<p class="sheet">Ingen oppslag akkurat nå.</p>
+{%- endif %}

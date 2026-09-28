@@ -1,0 +1,32 @@
+---
+layout: layouts/page.njk
+utenArk: true
+title: Temaer
+ingress: Finn informasjon om det du lurer på.
+permalink: /temaer/
+---
+<section class="sheet" aria-label="Populære temaer">
+<ul class="chips" role="list">
+  {%- for t in temaer %}
+  <li><a class="chip" href="{{ t.url }}">{{ t.tittel }}</a></li>
+  {%- endfor %}
+</ul>
+</section>
+
+<section class="sheet" aria-labelledby="alle-temaer">
+<h2 id="alle-temaer" class="section-title">Alle temaer</h2>
+<ul class="topic-cards" role="list">
+  {%- for t in collections.temasider %}
+  <li>
+    <a class="topic-card" href="{{ t.url }}">
+      <span class="avatar"><svg class="icon" aria-hidden="true"><use href="#{{ t.data.ikon }}"/></svg></span>
+      <span>
+        <strong>{{ t.data.title }}</strong>
+        {%- if t.data.kort %}<small>{{ t.data.kort }}</small>{% endif %}
+      </span>
+      <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+    </a>
+  </li>
+  {%- endfor %}
+</ul>
+</section>

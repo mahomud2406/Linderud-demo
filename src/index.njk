@@ -2,70 +2,75 @@
 layout: layouts/base.njk
 title: Forside
 bodyClass: home
-eleventyNavigation:
-  key: Forside
-  order: 0
 ---
-<section class="hero">
-  <div class="container">
-    <h1>Velkommen til Linderud</h1>
-    <p>Her finner du informasjon for oss som bor i {{ site.borettslag }}: kontaktinfo, parkering, regelverk, dokumenter, TV og internett.</p>
-    <form class="hero-search" action="/sok/" method="get" role="search">
-      <label class="visually-hidden" for="hero-q">Søk på siden</label>
-      <input id="hero-q" name="q" type="search" placeholder="Hva leter du etter?" autocomplete="off">
-      <button type="submit">
-        <svg class="icon" aria-hidden="true"><use href="#i-sok"/></svg>
-        Søk
-      </button>
-    </form>
+<section class="home-hero" aria-labelledby="borettslaget">
+  <div class="home-photo-wrap">
+    <img class="home-photo" src="/assets/img/linderud-illustrasjon.svg" alt="" width="1200" height="420">
+  </div>
+  <div class="home-panel">
+    <div class="container">
+      <h1 id="borettslaget">{{ site.borettslag }}</h1>
+      <p class="home-address">{{ site.adresseKort }}</p>
+      <a class="home-more" href="/temaer/borettslaget/">Om borettslaget</a>
+
+      <ul class="quick-actions" role="list">
+        {%- for k in hurtigknapper %}
+        <li>
+          <a href="{{ k.url }}">
+            <span class="quick-circle"><svg class="icon" aria-hidden="true"><use href="#{{ k.ikon }}"/></svg></span>
+            {{ k.tittel }}
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="snarveier">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="snarveier">Snarveier</h2>
-    </div>
-    <ul class="card-grid card-grid-shortcuts" role="list">
-      {%- for s in snarveier %}
-      <li>
-        <a class="card card-link" href="{{ s.url }}">
-          <span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#{{ s.ikon }}"/></svg></span>
-          <span class="card-title">{{ s.tittel }}</span>
-          <span class="card-text">{{ s.tekst }}</span>
-          <svg class="icon card-arrow" aria-hidden="true"><use href="#i-pil"/></svg>
-        </a>
-      </li>
-      {%- endfor %}
-    </ul>
-  </div>
-</section>
+<div class="home-sheet">
+  <div class="container home-grid">
+    <div class="home-col">
+      {%- set siste = collections.nyheter[0] %}
+      {%- if siste %}
+      <section class="notice" aria-labelledby="siste-oppslag">
+        <span class="notice-icon"><svg class="icon" aria-hidden="true"><use href="#i-bjelle"/></svg></span>
+        <time datetime="{{ siste.date | isoDato }}">{{ siste.date | norskDato }}</time>
+        <h2 id="siste-oppslag">{{ siste.data.title }}</h2>
+        {%- if siste.data.ingress %}<p>{{ siste.data.ingress }}</p>{% endif %}
+        <a class="button" href="{{ siste.url }}">Les mer</a>
+      </section>
+      {%- endif %}
 
-{%- if collections.nyheter | length %}
-<section class="section section-alt" aria-labelledby="oppslag">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="oppslag">Oppslag</h2>
+      <section class="sheet" aria-labelledby="temaer-tittel">
+        <h2 id="temaer-tittel" class="section-title">Hva lurer du på?</h2>
+        <form class="search-field" action="/sok/" method="get" role="search">
+          <svg class="icon" aria-hidden="true"><use href="#i-sok"/></svg>
+          <label class="visually-hidden" for="hjem-sok">Søk på siden</label>
+          <input id="hjem-sok" name="q" type="search" placeholder="Søk, f.eks. vaskeri" autocomplete="off">
+          <button class="button" type="submit">Søk</button>
+        </form>
+        <ul class="chips" role="list">
+          {%- for t in temaer %}
+          <li><a class="chip" href="{{ t.url }}">{{ t.tittel }}</a></li>
+          {%- endfor %}
+        </ul>
+      </section>
     </div>
-    <ul class="news-list" role="list">
-      {%- for n in collections.nyheter | head(5) %}
-      <li class="news-item">
-        <time datetime="{{ n.date | isoDato }}">{{ n.date | norskDato }}</time>
-        <h3><a href="{{ n.url }}">{{ n.data.title }}</a></h3>
-        {%- if n.data.ingress %}<p>{{ n.data.ingress }}</p>{% endif %}
-      </li>
-      {%- endfor %}
-    </ul>
-  </div>
-</section>
-{%- endif %}
 
-<section class="section{% if not (collections.nyheter | length) %} section-alt{% endif %}" aria-labelledby="kontakt-oss">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="kontakt-oss">Kontakt oss</h2>
-      <a href="/kontakt/">All kontaktinformasjon <svg class="icon icon-inline" aria-hidden="true"><use href="#i-pil"/></svg></a>
+    <div class="home-col">
+      <section class="sheet" aria-labelledby="kontakter-tittel">
+        <h2 id="kontakter-tittel" class="section-title">Kontakter <a href="/kontakt/">Se alle</a></h2>
+        {% include "partials/kontaktliste.njk" %}
+      </section>
+
+      <section class="sheet" aria-labelledby="dok-tittel">
+        <h2 id="dok-tittel" class="section-title">Dokumenter <a href="/dokumenter/">Se alle</a></h2>
+        <ul class="doc-list" role="list">
+          {%- for d in [dokumenter[0].dokumenter[0], dokumenter[1].dokumenter[0], dokumenter[2].dokumenter[0]] %}
+          {% include "partials/dokument.njk" %}
+          {%- endfor %}
+        </ul>
+      </section>
     </div>
-    {% include "partials/kontaktkort.njk" %}
   </div>
-</section>
+</div>

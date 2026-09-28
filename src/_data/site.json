@@ -1,13 +1,15 @@
 {
-  "name": "Linderudbo",
-  "tagline": "Informasjon for beboerne på Linderud",
-  "description": "Informasjon for beboerne i Linderud Borettslag II: kontaktinfo, parkering og garasjer, regelverk, dokumenter, TV og internett.",
+  "name": "linderudbo",
+  "tittel": "Linderudbo",
+  "description": "Nettsiden for beboerne i Linderud Borettslag II: kontaktinfo, parkering, vaskeri, regelverk, dokumenter, TV og internett.",
   "lang": "nb",
   "locale": "nb_NO",
   "borettslag": "Linderud Borettslag II",
   "adresse": "Erich Mogensøns vei 14–36, 0594 Oslo",
+  "adresseKort": "Erich Mogensøns vei 14–36, Oslo",
+  "postadresse": "c/o Nordberg Eiendomsforvaltning AS, Erich Mogensøns vei 12, 0594 Oslo",
   "orgnr": "955 592 611",
-  "gammelSide": "http://linderudbo.no",
+  "gammelSide": "http://www.linderudbo.no/L2/",
   "repo": "https://github.com/mahomud2406/Linderud-demo",
   "demo": true
 }

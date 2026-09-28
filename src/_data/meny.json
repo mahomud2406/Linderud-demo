@@ -1,0 +1,7 @@
+[
+  { "tittel": "Forside", "url": "/", "ikon": "i-hjem" },
+  { "tittel": "Oppslag", "url": "/oppslag/", "ikon": "i-oppslag" },
+  { "tittel": "Dokumenter", "url": "/dokumenter/", "ikon": "i-dokument" },
+  { "tittel": "Temaer", "url": "/temaer/", "ikon": "i-stjerne" },
+  { "tittel": "Kontakt", "url": "/kontakt/", "ikon": "i-kontakt" }
+]

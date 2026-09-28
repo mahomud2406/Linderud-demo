@@ -1,0 +1,17 @@
+<ul class="contact-list" role="list">
+  {%- for k in kontakter.personer %}
+  <li>
+    <div class="contact-row">
+      <span class="avatar"><svg class="icon" aria-hidden="true"><use href="#{{ k.ikon }}"/></svg></span>
+      <div>
+        <p class="contact-role">{{ k.rolle }}</p>
+        {%- if k.navn %}<p class="contact-name">{{ k.navn }}</p>{% endif %}
+        <div class="contact-links">
+          {%- if k.telefon %}<a href="tel:{{ k.telefon | telLenke }}"><svg class="icon" aria-hidden="true"><use href="#i-telefon"/></svg>{{ k.telefon }}</a>{% endif %}
+          {%- if k.epost %}<a href="mailto:{{ k.epost }}"><svg class="icon" aria-hidden="true"><use href="#i-epost"/></svg>{{ k.epost }}</a>{% endif %}
+        </div>
+      </div>
+    </div>
+  </li>
+  {%- endfor %}
+</ul>

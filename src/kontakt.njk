@@ -1,9 +1,97 @@
 ---
 layout: layouts/page.njk
+utenArk: true
 title: Kontakt
-ingress: Hvem du kontakter om hva i borettslaget.
-eleventyNavigation:
-  key: Kontakt
-  order: 4
+ingress: Hvem du kontakter om hva, og skjema for å sende melding til styret.
 ---
-{% include "partials/kontaktkort.njk" %}
+<ul class="contact-cards" role="list">
+  {%- for k in kontakter.personer %}
+  <li class="sheet contact-card" id="{{ k.id }}">
+    <header>
+      <span class="avatar"><svg class="icon" aria-hidden="true"><use href="#{{ k.ikon }}"/></svg></span>
+      <div>
+        <h2>{{ k.rolle }}</h2>
+        {%- if k.navn %}<p class="contact-name">{{ k.navn }}</p>{% endif %}
+      </div>
+    </header>
+    {%- if k.beskrivelse %}<p class="contact-desc">{{ k.beskrivelse }}</p>{% endif %}
+    <div class="contact-actions">
+      {%- if k.telefon %}
+      <a class="button" href="tel:{{ k.telefon | telLenke }}">
+        <svg class="icon" aria-hidden="true"><use href="#i-telefon"/></svg>{{ k.telefon }}
+      </a>
+      {%- endif %}
+      {%- if k.epost %}
+      <a class="button button-outline" href="mailto:{{ k.epost }}">
+        <svg class="icon" aria-hidden="true"><use href="#i-epost"/></svg>{{ k.epost }}
+      </a>
+      {%- endif %}
+      {%- if k.nettside %}
+      <a class="button button-outline" href="{{ k.nettside }}">
+        <svg class="icon" aria-hidden="true"><use href="#i-ekstern"/></svg>Nettside
+      </a>
+      {%- endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ul>
+
+<form class="sheet form" id="skriv" action="mailto:{{ kontakter.styretEpost }}" method="post" enctype="text/plain" data-melding-skjema>
+  <h2 class="form-title">Send melding</h2>
+  <p class="form-intro">Meldingen åpnes i e-postprogrammet ditt, klar til å sendes.</p>
+
+  <div class="field">
+    <fieldset>
+      <legend>Til</legend>
+      <div class="chip-options">
+        {%- for k in kontakter.personer %}
+        {%- if k.epost %}
+        <label class="chip-option">
+          <input type="radio" name="til" value="{{ k.epost }}" data-rolle="{{ k.rolle }}"{% if loop.first %} checked{% endif %}>
+          <span>{{ k.rolle }}</span>
+        </label>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="field">
+    <label for="emne">Emne</label>
+    <input id="emne" name="emne" type="text" required autocomplete="off">
+  </div>
+
+  <div class="field">
+    <label for="melding">Melding</label>
+    <textarea id="melding" name="melding" required></textarea>
+  </div>
+
+  <div class="field">
+    <fieldset>
+      <legend>Tema</legend>
+      <div class="chip-options">
+        {%- for t in meldingstemaer %}
+        <label class="chip-option">
+          <input type="radio" name="tema" value="{{ t }}">
+          <span>{{ t }}</span>
+        </label>
+        {%- endfor %}
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="field">
+    <label for="navn">Navn og leilighet</label>
+    <input id="navn" name="navn" type="text" autocomplete="name" placeholder="F.eks. Kari Nordmann, Erich Mogensøns vei 28">
+  </div>
+
+  <p class="form-recipient" aria-live="polite">Sendes til <strong data-mottaker>{{ kontakter.personer[0].rolle }} ({{ kontakter.personer[0].epost }})</strong></p>
+
+  <div class="form-actions">
+    <button class="button" type="submit">
+      <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+      Send melding
+    </button>
+    <p class="form-note">Vedlegg, som bilder, kan du legge ved i e-posten før du sender.</p>
+  </div>
+</form>

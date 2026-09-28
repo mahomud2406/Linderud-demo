@@ -1,8 +1,6 @@
 import { HtmlBasePlugin } from "@11ty/eleventy";
-import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
   // Legger til riktig prefiks på alle lenker når siden ligger i en undermappe
   // (f.eks. brukernavn.github.io/Linderud-demo/). Styres av --pathprefix ved bygging.
   eleventyConfig.addPlugin(HtmlBasePlugin);
@@ -11,6 +9,10 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/dokumenter");
   eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@fontsource-variable/nunito/files/nunito-latin-wght-normal.woff2":
+      "assets/fonts/nunito.woff2",
+  });
 
   // Datoer vises på norsk, f.eks. «8. april 2025».
   eleventyConfig.addFilter("norskDato", (value) => {
@@ -38,6 +40,13 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addCollection("nyheter", (collectionApi) =>
     collectionApi.getFilteredByTag("nyhet").sort((a, b) => b.date - a.date),
+  );
+
+  // Temasider (parkering, vaskeri, TV …) sortert etter «rekkefolge» i toppen av filen.
+  eleventyConfig.addCollection("temasider", (collectionApi) =>
+    collectionApi
+      .getFilteredByTag("tema")
+      .sort((a, b) => (a.data.rekkefolge ?? 99) - (b.data.rekkefolge ?? 99)),
   );
 
   return {

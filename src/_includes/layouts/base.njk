@@ -2,18 +2,18 @@
 <html lang="{{ site.lang }}">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title and page.url != "/" %}{{ title }} – {% endif %}{{ site.name }}</title>
-  <meta name="description" content="{{ description or site.description }}">
-  <meta name="theme-color" content="#1f5f4a" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#101614" media="(prefers-color-scheme: dark)">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{% if title and page.url != "/" %}{{ title }} – {% endif %}{{ site.tittel }} · {{ site.borettslag }}</title>
+  <meta name="description" content="{{ ingress or description or site.description }}">
+  <meta name="theme-color" content="#3d4fc1">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="{{ site.locale }}">
-  <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:title" content="{{ title or site.name }}">
-  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:site_name" content="{{ site.tittel }}">
+  <meta property="og:title" content="{{ title or site.borettslag }}">
+  <meta property="og:description" content="{{ ingress or description or site.description }}">
   <script>document.documentElement.classList.add("js")</script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/main.css">
   <script src="/assets/js/main.js" defer></script>
   {% block head %}{% endblock %}
@@ -22,15 +22,6 @@
   {% include "partials/icons.njk" %}
   <a class="skip-link" href="#innhold">Hopp til innholdet</a>
 
-  {% if site.demo %}
-  <div class="demo-banner" role="note">
-    <div class="container">
-      <strong>Forslag til ny nettside.</strong>
-      Dagens side finner du på <a href="{{ site.gammelSide }}">{{ site.gammelSide | replace("http://", "") }}</a>.
-    </div>
-  </div>
-  {% endif %}
-
   {% include "partials/header.njk" %}
 
   <main id="innhold" tabindex="-1">
@@ -38,5 +29,6 @@
   </main>
 
   {% include "partials/footer.njk" %}
+  {% include "partials/tabbar.njk" %}
 </body>
 </html>
