@@ -2,5 +2,5 @@
   { "tittel": "Kontakt styret", "url": "/kontakt/#skriv", "ikon": "i-epost" },
   { "tittel": "Vaktmester", "url": "/kontakt/#vaktmester", "ikon": "i-verktoy" },
   { "tittel": "Vaskeri", "url": "/temaer/vaskeri/", "ikon": "i-vask" },
-  { "tittel": "Gjesteparkering", "url": "/temaer/gjesteparkering/", "ikon": "i-bil" }
+  { "tittel": "Gjeste\u00adparkering", "url": "/temaer/gjesteparkering/", "ikon": "i-bil" }
 ]

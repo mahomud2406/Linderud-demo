@@ -6,7 +6,7 @@ Forslag til ny nettside for Linderud Borettslag II, som erstatning for dagens
 - Fungerer på mobil, nettbrett og PC
 - Sikker tilkobling (https) via GitHub Pages
 - Søk i alt innhold
-- Design inspirert av Vibbo: runde hurtigknapper, temaknapper og bunnmeny på mobil
+- Enkel app-lignende navigasjon: hurtigknapper, temaknapper og bunnmeny på mobil
 - «Send melding»-skjema som åpner en ferdig utfylt e-post til styret, vaktmester m.fl.
 - Innholdet ligger som enkle tekstfiler som styret kan endre selv
 

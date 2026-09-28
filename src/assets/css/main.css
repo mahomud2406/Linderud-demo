@@ -12,32 +12,34 @@
 }
 
 :root {
-  --blue: #3d4fc1;
-  --blue-hover: #3242a8;
-  --blue-soft: #e8ecfb;
-  --blue-circle: #8aa4f0;
-  --chip: #4d68d8;
-  --chip-hover: #3d56c2;
-  --navy: #121c45;
-  --navy-hover: #1e2b62;
+  --primary: #1d5e4f;
+  --primary-hover: #164a3e;
+  --primary-soft: #e0eee7;
+  --primary-strong: #0f3d33;
+  --chip-bg: #e0eee7;
+  --chip-bg-hover: #cbe3d7;
+  --chip-text: #0f3d33;
+  --ink: #10302a;
+  --ink-hover: #1b4a40;
+  --accent: #e3a33b;
 
-  --bg: #eef1f8;
+  --bg: #f2f5f1;
   --surface: #ffffff;
-  --surface-alt: #f5f7fc;
-  --text: #16203f;
-  --muted: #5b6488;
-  --border: #dde2ef;
-  --link: #3345b5;
-  --focus: #f2b632;
+  --surface-alt: #f6f8f5;
+  --text: #17231f;
+  --muted: #56655f;
+  --border: #d8e2dc;
+  --link: #1a6b57;
+  --focus: #e3a33b;
 
-  --yellow: #fdf6d9;
-  --yellow-border: #f1e3a6;
-  --amber: #c98a0c;
+  --yellow: #fcf3e1;
+  --yellow-border: #f0dcb4;
+  --amber: #b87512;
 
   --font: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --radius: 18px;
   --radius-small: 12px;
-  --shadow: 0 1px 2px rgb(22 32 63 / 5%), 0 6px 20px rgb(22 32 63 / 6%);
+  --shadow: 0 1px 2px rgb(16 48 42 / 5%), 0 6px 20px rgb(16 48 42 / 6%);
   --container: 70rem;
   --gutter: 1rem;
   --appbar-height: 3.75rem;
@@ -48,20 +50,23 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --blue-soft: #232c55;
-    --blue-circle: #6f8be6;
-    --bg: #0d1224;
-    --surface: #161d36;
-    --surface-alt: #1c2442;
-    --text: #e7eaf6;
-    --muted: #a5acc9;
-    --border: #2a3356;
-    --link: #9fb2ff;
-    --yellow: #2c2814;
-    --yellow-border: #4a4220;
-    --amber: #f0c04a;
-    --navy: #e7eaf6;
-    --navy-hover: #ffffff;
+    --primary-soft: #1d3a32;
+    --primary-strong: #bfe6d6;
+    --chip-bg: #1d3a32;
+    --chip-bg-hover: #24483e;
+    --chip-text: #cfeee1;
+    --bg: #0e1513;
+    --surface: #16201d;
+    --surface-alt: #1b2724;
+    --text: #e6eeea;
+    --muted: #a3b3ac;
+    --border: #2a3934;
+    --link: #7fd3b5;
+    --yellow: #2d2615;
+    --yellow-border: #4b3f22;
+    --amber: #f0bd5c;
+    --ink: #e6eeea;
+    --ink-hover: #ffffff;
     --shadow: 0 1px 2px rgb(0 0 0 / 30%);
 
     color-scheme: dark;
@@ -191,7 +196,7 @@ table {
   top: -4rem;
   z-index: 100;
   padding: 0.75rem 1rem;
-  background: var(--navy);
+  background: var(--ink);
   color: #fff;
   border-radius: 999px;
   font-weight: 700;
@@ -208,8 +213,8 @@ main:focus {
 /* --- Demo-stripe ---------------------------------------------------------- */
 
 .demo-ribbon {
-  background: #121c45;
-  color: #cfd6f5;
+  background: #10302a;
+  color: #cfe3da;
   font-size: 0.8rem;
   padding-block: 0.35rem;
   text-align: center;
@@ -226,7 +231,7 @@ main:focus {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--blue);
+  background: var(--primary);
   color: #fff;
 }
 
@@ -243,9 +248,9 @@ main:focus {
   gap: 0.45rem;
   color: #fff;
   text-decoration: none;
-  font-weight: 900;
-  font-size: 1.6rem;
-  letter-spacing: -0.03em;
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
   line-height: 1;
 }
 
@@ -281,7 +286,7 @@ main:focus {
 .topnav a {
   display: block;
   padding: 0.45rem 0.9rem;
-  border-radius: 999px;
+  border-radius: 10px;
   color: #fff;
   text-decoration: none;
   font-weight: 700;
@@ -293,7 +298,7 @@ main:focus {
 
 .topnav a[aria-current] {
   background: #fff;
-  color: var(--blue);
+  color: var(--primary);
 }
 
 .appbar-actions {
@@ -325,22 +330,8 @@ main:focus {
   width: 0.6rem;
   height: 0.6rem;
   border-radius: 50%;
-  background: #4fd18b;
-  box-shadow: 0 0 0 2px var(--blue);
-}
-
-@media (min-width: 30rem) {
-  .quick-actions {
-    gap: 0.75rem 1.5rem;
-  }
-}
-
-@media (max-width: 47.99rem) {
-  .wordmark {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--primary);
 }
 
 @media (min-width: 60rem) {
@@ -386,7 +377,7 @@ main:focus {
 }
 
 .tabbar a[aria-current] {
-  color: var(--blue);
+  color: var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -415,7 +406,7 @@ main:focus {
 /* --- Forside ------------------------------------------------------------- */
 
 .home-hero {
-  background: var(--blue);
+  background: var(--primary);
   color: #fff;
 }
 
@@ -441,7 +432,6 @@ main:focus {
 
 .home-panel {
   padding-block: 1.5rem 3.75rem;
-  text-align: center;
 }
 
 .home-panel h1 {
@@ -464,12 +454,12 @@ main:focus {
 }
 
 .quick-actions {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.75rem 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.6rem;
+  max-width: 38rem;
   list-style: none;
-  margin: 1.5rem 0 0;
+  margin: 1.25rem 0 0;
   padding: 0;
 }
 
@@ -477,35 +467,54 @@ main:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0.45rem;
-  width: 5.1rem;
-  color: #fff;
+  height: 100%;
+  min-height: 5.75rem;
+  padding: 0.75rem 0.3rem;
+  background: var(--surface);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 14%);
+  color: var(--text);
+  text-align: center;
   text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 800;
   line-height: 1.2;
+  overflow-wrap: anywhere;
+  transition: transform 0.15s ease;
 }
 
-.quick-circle {
+.quick-actions a:hover {
+  transform: translateY(-2px);
+}
+
+.quick-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.75rem;
-  height: 3.75rem;
-  border-radius: 50%;
-  background: var(--blue-circle);
-  box-shadow: 0 4px 14px rgb(10 20 80 / 25%);
-  transition: transform 0.15s ease, background 0.15s ease;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  background: var(--primary-soft);
+  color: var(--primary);
 }
 
-.quick-circle .icon {
-  width: 1.65rem;
-  height: 1.65rem;
+@media (prefers-color-scheme: dark) {
+  .quick-icon {
+    color: var(--link);
+  }
 }
 
-.quick-actions a:hover .quick-circle {
-  transform: translateY(-2px);
-  background: #9db4f5;
+.quick-icon .icon {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+@media (min-width: 30rem) {
+  .quick-actions a {
+    font-size: 0.875rem;
+  }
 }
 
 .home-sheet {
@@ -568,22 +577,35 @@ main:focus {
 
 .notice {
   display: grid;
-  justify-items: center;
-  gap: 0.35rem;
-  padding: 1.5rem 1.25rem;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 0.3rem 1rem;
+  padding: 1.25rem;
   background: var(--yellow);
   border: 1px solid var(--yellow-border);
-  border-radius: var(--radius);
-  text-align: center;
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius-small);
+}
+
+.notice > :not(.notice-icon) {
+  grid-column: 2;
 }
 
 .notice-icon {
-  color: var(--amber);
+  grid-row: 1 / span 4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
 }
 
 .notice-icon .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.35rem;
+  height: 1.35rem;
 }
 
 .notice h2,
@@ -603,7 +625,8 @@ main:focus {
 }
 
 .notice .button {
-  margin-top: 0.6rem;
+  justify-self: start;
+  margin-top: 0.5rem;
 }
 
 /* --- Knapper -------------------------------------------------------------- */
@@ -615,9 +638,9 @@ main:focus {
   gap: 0.45rem;
   min-height: 2.75rem;
   padding: 0.55rem 1.25rem;
-  border: 2px solid var(--navy);
-  border-radius: 999px;
-  background: var(--navy);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  background: var(--ink);
   color: var(--surface);
   font: inherit;
   font-weight: 800;
@@ -627,8 +650,8 @@ main:focus {
 }
 
 .button:hover {
-  background: var(--navy-hover);
-  border-color: var(--navy-hover);
+  background: var(--ink-hover);
+  border-color: var(--ink-hover);
 }
 
 .button-outline {
@@ -639,7 +662,7 @@ main:focus {
 }
 
 .button-outline:hover {
-  background: var(--blue-soft);
+  background: var(--primary-soft);
   border-color: var(--link);
 }
 
@@ -664,9 +687,9 @@ main:focus {
   align-items: center;
   min-height: 2.5rem;
   padding: 0.45rem 1rem;
-  border-radius: 999px;
-  background: var(--chip);
-  color: #fff;
+  border-radius: 10px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
   font-weight: 700;
   font-size: 0.93rem;
   line-height: 1.2;
@@ -674,7 +697,7 @@ main:focus {
 }
 
 .chip:hover {
-  background: var(--chip-hover);
+  background: var(--chip-bg-hover);
 }
 
 .search-field {
@@ -685,11 +708,11 @@ main:focus {
   padding: 0.3rem 0.3rem 0.3rem 1rem;
   background: var(--surface-alt);
   border: 1.5px solid var(--border);
-  border-radius: 999px;
+  border-radius: 14px;
 }
 
 .search-field:focus-within {
-  border-color: var(--blue);
+  border-color: var(--primary);
 }
 
 .search-field .icon {
@@ -749,8 +772,8 @@ main:focus {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
-  background: var(--blue-soft);
-  color: var(--blue);
+  background: var(--primary-soft);
+  color: var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -894,8 +917,8 @@ main:focus {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--radius-small);
-  background: var(--blue-soft);
-  color: var(--blue);
+  background: var(--primary-soft);
+  color: var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -987,7 +1010,7 @@ main:focus {
 }
 
 .back-link:hover {
-  background: var(--blue-soft);
+  background: var(--primary-soft);
 }
 
 .back-link .icon {
@@ -1023,8 +1046,8 @@ main:focus {
   width: 3.25rem;
   height: 3.25rem;
   margin-bottom: 0.75rem;
-  border-radius: 50%;
-  background: var(--blue);
+  border-radius: 14px;
+  background: var(--primary);
   color: #fff;
 }
 
@@ -1076,7 +1099,7 @@ main:focus {
 }
 
 .prose li::marker {
-  color: var(--blue);
+  color: var(--primary);
 }
 
 .prose img {
@@ -1126,7 +1149,7 @@ main:focus {
 .facts li {
   margin: 0 !important;
   padding: 1rem;
-  background: var(--blue-soft);
+  background: var(--primary-soft);
   border-radius: var(--radius-small);
 }
 
@@ -1135,7 +1158,7 @@ main:focus {
   font-size: 1.6rem;
   font-weight: 900;
   line-height: 1.1;
-  color: var(--blue);
+  color: var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1204,8 +1227,8 @@ main:focus {
 }
 
 .side-list a[aria-current] {
-  background: var(--blue-soft);
-  color: var(--blue);
+  background: var(--primary-soft);
+  color: var(--primary);
   font-weight: 800;
 }
 
@@ -1218,7 +1241,7 @@ main:focus {
 .side-list .icon {
   width: 1.2rem;
   height: 1.2rem;
-  color: var(--blue);
+  color: var(--primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1262,7 +1285,7 @@ main:focus {
 }
 
 .topic-card:hover {
-  border-color: var(--blue);
+  border-color: var(--primary);
 }
 
 .topic-card strong {
@@ -1331,7 +1354,7 @@ main:focus {
 }
 
 .field input[type="text"] {
-  border-radius: 999px;
+  border-radius: 12px;
 }
 
 .field textarea {
@@ -1343,8 +1366,8 @@ main:focus {
 .field textarea:focus,
 .field select:focus {
   outline: none;
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px var(--blue-soft);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-soft);
 }
 
 .chip-options {
@@ -1364,16 +1387,18 @@ main:focus {
   align-items: center;
   min-height: 2.4rem;
   padding: 0.4rem 0.95rem;
-  border: 1.5px solid var(--chip);
-  border-radius: 999px;
-  color: var(--link);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
   font-weight: 700;
   font-size: 0.9rem;
   cursor: pointer;
 }
 
 .chip-option input:checked + span {
-  background: var(--chip);
+  background: var(--primary);
+  border-color: var(--primary);
   color: #fff;
 }
 
@@ -1385,7 +1410,7 @@ main:focus {
 .form-recipient {
   margin: 0;
   padding: 0.75rem 1rem;
-  background: var(--blue-soft);
+  background: var(--primary-soft);
   border-radius: var(--radius-small);
   font-size: 0.95rem;
 }
@@ -1407,21 +1432,21 @@ main:focus {
 /* --- Søk ------------------------------------------------------------------ */
 
 .search-page {
-  --pagefind-ui-primary: var(--blue);
+  --pagefind-ui-primary: var(--primary);
   --pagefind-ui-text: var(--text);
   --pagefind-ui-background: var(--surface);
   --pagefind-ui-border: var(--border);
   --pagefind-ui-tag: var(--surface-alt);
   --pagefind-ui-border-width: 1.5px;
-  --pagefind-ui-border-radius: 999px;
+  --pagefind-ui-border-radius: 12px;
   --pagefind-ui-font: var(--font);
 }
 
 /* --- Bunn ------------------------------------------------------------------ */
 
 .site-footer {
-  background: #121c45;
-  color: #c9d0ef;
+  background: #10302a;
+  color: #c8dcd3;
   font-size: 0.95rem;
 }
 
@@ -1459,7 +1484,7 @@ main:focus {
 .footer-role {
   display: block;
   font-size: 0.8rem;
-  color: #9aa5d6;
+  color: #95b3a7;
 }
 
 .footer-bottom {
@@ -1470,7 +1495,7 @@ main:focus {
   padding-block: 1rem 1.25rem;
   border-top: 1px solid rgb(255 255 255 / 12%);
   font-size: 0.85rem;
-  color: #9aa5d6;
+  color: #95b3a7;
 }
 
 .footer-bottom p {
@@ -1478,11 +1503,11 @@ main:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .quick-circle {
+  .quick-actions a {
     transition: none;
   }
 
-  .quick-actions a:hover .quick-circle {
+  .quick-actions a:hover {
     transform: none;
   }
 }
