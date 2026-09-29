@@ -51,24 +51,6 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #141414;
-    --surface: #141414;
-    --surface-alt: #1e1e1e;
-    --text: #ececea;
-    --muted: #ababa8;
-    --border: #333331;
-    --border-strong: #ececea;
-    --accent: #8fc4b2;
-    --button-bg: #ececea;
-    --button-text: #141414;
-    --focus: #ececea;
-
-    color-scheme: dark;
-  }
-}
-
 @media (min-width: 48rem) {
   :root {
     --gutter: 2rem;
