@@ -8,7 +8,7 @@ ingress: Ny leie for garasjer og parkeringsplasser fra 1. juli 2026, oppussing, 
 
 **Garasje og parkering:** Styret ser seg nødt til å øke leien for garasjer og parkeringsplasser fra 1. juli 2026. Prisene har ikke vært regulert siden 2010, og borettslaget har behov for økte inntekter til vedlikehold og nedbetaling av elbil-ladere m/infrastruktur. De nye månedsprisene blir som følger:
 
-| | Pris pr. måned |
+| Hva | Pris pr. måned |
 | --- | --- |
 | Parkeringsplass | kr. 200 |
 | Garasje uten elbil-lader | kr. 400 |

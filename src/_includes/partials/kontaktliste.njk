@@ -5,7 +5,7 @@
     <div class="contact-row">
       <span class="avatar"><svg class="icon" aria-hidden="true"><use href="#{{ k.ikon }}"/></svg></span>
       <div>
-        <p class="contact-role">{{ k.rolle }}</p>
+        <h3 class="contact-role">{{ k.rolle }}</h3>
         {%- if k.navn %}<p class="contact-name">{{ k.navn }}</p>{% endif %}
         <div class="contact-links">
           {%- if k.telefon %}<a href="tel:{{ k.telefon | telLenke }}"><svg class="icon" aria-hidden="true"><use href="#i-telefon"/></svg>{{ k.telefon }}</a>{% endif %}

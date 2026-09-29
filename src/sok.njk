@@ -32,6 +32,9 @@ eleventyExcludeFromCollections: true
     const q = new URLSearchParams(location.search).get("q");
     if (q) ui.triggerSearch(q);
     const input = document.querySelector("#sok input");
-    if (input) input.focus();
+    if (input) {
+      input.setAttribute("aria-label", "Søk på siden");
+      input.focus();
+    }
   });
 </script>

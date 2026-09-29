@@ -1,13 +1,13 @@
 <footer class="site-footer">
   <div class="container footer-grid">
-    <section aria-labelledby="footer-om">
+    <div>
       <h2 id="footer-om" class="footer-heading">{{ site.borettslag }}</h2>
       <p>{{ site.adresse }}</p>
       <p>Org.nr. {{ site.orgnr }}</p>
       <p><a href="/temaer/borettslaget/">Om borettslaget</a></p>
-    </section>
+    </div>
 
-    <section aria-labelledby="footer-kontakt">
+    <div>
       <h2 id="footer-kontakt" class="footer-heading">Kontakt</h2>
       <ul class="footer-links">
         {%- for k in kontakter.personer %}
@@ -18,16 +18,16 @@
         </li>
         {%- endfor %}
       </ul>
-    </section>
+    </div>
 
-    <section aria-labelledby="footer-temaer">
+    <div>
       <h2 id="footer-temaer" class="footer-heading">Populære temaer</h2>
       <ul class="footer-links">
         {%- for t in temaer | head(7) %}
         <li><a href="{{ t.url }}">{{ t.tittel }}</a></li>
         {%- endfor %}
       </ul>
-    </section>
+    </div>
   </div>
   <div class="container footer-bottom">
     <p>© {{ build.year }} {{ site.borettslag }}</p>

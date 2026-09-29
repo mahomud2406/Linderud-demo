@@ -196,8 +196,10 @@ table {
   top: -4rem;
   z-index: 100;
   padding: 0.75rem 1rem;
-  background: var(--ink);
+  background: #10302a;
   color: #fff;
+  outline: 3px solid #e3a33b;
+  outline-offset: 2px;
   border-radius: 999px;
   font-weight: 700;
 }
@@ -821,6 +823,8 @@ main:focus {
 
 .contact-role {
   margin: 0;
+  font-size: 1rem;
+  line-height: inherit;
   font-weight: 800;
 }
 

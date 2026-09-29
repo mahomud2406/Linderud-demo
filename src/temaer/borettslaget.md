@@ -13,7 +13,7 @@ kilde: http://linderudbo.no/L2/
 
 ## Fakta
 
-| Hva | |
+| Hva | Opplysning |
 | --- | --- |
 | Org.nr. | [955 592 611](http://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=955592611) |
 | Adresser | Erich Mogensøns vei 14,16,18, 20,22,24, 26,28,30, 32,34,36; 0594 Oslo ([kart](http://www.finn.no/kart?street=Erich+Mogens%F8ns+vei&no=22&zipcode=0594), [m/husnumre](/assets/img/Linderud-Husnumre.gif)) |
