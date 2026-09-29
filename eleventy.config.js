@@ -9,10 +9,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/dokumenter");
   eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
-  eleventyConfig.addPassthroughCopy({
-    "node_modules/@fontsource-variable/nunito/files/nunito-latin-wght-normal.woff2":
-      "assets/fonts/nunito.woff2",
-  });
+  for (const vekt of [400, 500, 600]) {
+    eleventyConfig.addPassthroughCopy({
+      [`node_modules/@fontsource/poppins/files/poppins-latin-${vekt}-normal.woff2`]:
+        `assets/fonts/poppins-${vekt}.woff2`,
+    });
+  }
 
   // Datoer vises på norsk, f.eks. «8. april 2025».
   eleventyConfig.addFilter("norskDato", (value) => {

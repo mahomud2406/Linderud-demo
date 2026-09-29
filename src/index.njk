@@ -4,76 +4,66 @@ title: Forside
 bodyClass: home
 ---
 <section class="home-hero" aria-labelledby="borettslaget">
-  <div class="home-panel">
-    <div class="container home-panel-grid">
-      <div class="home-intro">
-        <h1 id="borettslaget">{{ site.borettslag }}</h1>
-        <p class="home-address">{{ site.adresseKort }}</p>
-        <a class="home-more" href="/temaer/borettslaget/">Om borettslaget</a>
-      </div>
-
-      <figure class="home-photo">
-        <img src="/assets/img/LBR2.jpg" alt="De fire boligblokkene i Linderud Borettslag II" width="1024" height="318" fetchpriority="high">
-      </figure>
-
-      <ul class="quick-actions" role="list">
-        {%- for k in hurtigknapper %}
-        <li>
-          <a href="{{ k.url }}">
-            <span class="quick-icon"><svg class="icon" aria-hidden="true"><use href="#{{ k.ikon }}"/></svg></span>
-            {{ k.tittel }}
-          </a>
-        </li>
-        {%- endfor %}
-      </ul>
-    </div>
+  <img class="home-hero-img" src="/assets/img/LBR2.jpg" alt="" width="1024" height="318" fetchpriority="high">
+  <div class="home-hero-text container">
+    <h1 id="borettslaget">Velkommen til {{ site.borettslag }}</h1>
+    <p>{{ site.adresse }}</p>
   </div>
 </section>
 
-<div class="home-sheet">
-  <div class="container home-grid">
-    <div class="home-col">
-      {%- set siste = collections.nyheter[0] %}
-      {%- if siste %}
-      <section class="notice" aria-labelledby="siste-oppslag">
-        <span class="notice-icon"><svg class="icon" aria-hidden="true"><use href="#i-bjelle"/></svg></span>
-        <time datetime="{{ siste.date | isoDato }}">{{ siste.date | norskDato }}</time>
-        <h2 id="siste-oppslag">{{ siste.data.title }}</h2>
-        {%- if siste.data.ingress %}<p>{{ siste.data.ingress }}</p>{% endif %}
-        <a class="button" href="{{ siste.url }}">Les mer</a>
-      </section>
-      {%- endif %}
+<nav class="home-quick" aria-label="Snarveier på forsiden">
+  <ul class="quick-actions container" role="list">
+    {%- for k in hurtigknapper %}
+    <li>
+      <a href="{{ k.url }}">
+        <svg class="icon" aria-hidden="true"><use href="#{{ k.ikon }}"/></svg>
+        <span>{{ k.tittel }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</nav>
 
-      <section class="sheet" aria-labelledby="temaer-tittel">
-        <h2 id="temaer-tittel" class="section-title">Hva lurer du på?</h2>
-        <form class="search-field" action="/sok/" method="get" role="search">
-          <svg class="icon" aria-hidden="true"><use href="#i-sok"/></svg>
-          <label class="visually-hidden" for="hjem-sok">Søk på siden</label>
-          <input id="hjem-sok" name="q" type="search" placeholder="Søk, f.eks. vaskeri" autocomplete="off">
-          <button class="button" type="submit">Søk</button>
-        </form>
-        <ul class="chips" role="list">
-          {%- for t in temaer %}
-          <li><a class="chip" href="{{ t.url }}">{{ t.tittel }}</a></li>
-          {%- endfor %}
-        </ul>
-      </section>
-    </div>
+<div class="container home-grid">
+  <div class="home-col">
+    {%- set siste = collections.nyheter[0] %}
+    {%- if siste %}
+    <section class="notice" aria-labelledby="siste-oppslag">
+      <p class="eyebrow">Siste oppslag · <time datetime="{{ siste.date | isoDato }}">{{ siste.date | norskDato }}</time></p>
+      <h2 id="siste-oppslag">{{ siste.data.title }}</h2>
+      {%- if siste.data.ingress %}<p>{{ siste.data.ingress }}</p>{% endif %}
+      <p class="notice-links"><a href="{{ siste.url }}">Les hele oppslaget</a> <a href="/oppslag/">Alle oppslag</a></p>
+    </section>
+    {%- endif %}
 
-    <div class="home-col">
-      <section class="sheet" aria-labelledby="kontakter-tittel">
-        <h2 id="kontakter-tittel" class="section-title">Kontakter <a href="/kontakt/">Se alle</a></h2>
-        {% include "partials/kontaktliste.njk" %}
-      </section>
+    <section class="home-section" aria-labelledby="temaer-tittel">
+      <h2 id="temaer-tittel" class="section-title">Finn informasjon</h2>
+      <form class="search-field" action="/sok/" method="get" role="search">
+        <label class="visually-hidden" for="hjem-sok">Søk på siden</label>
+        <input id="hjem-sok" name="q" type="search" placeholder="Søk, f.eks. vaskeri" autocomplete="off">
+        <button class="button" type="submit">Søk</button>
+      </form>
+      <ul class="chips" role="list">
+        {%- for t in temaer %}
+        <li><a class="chip" href="{{ t.url }}">{{ t.tittel }}</a></li>
+        {%- endfor %}
+      </ul>
+    </section>
+  </div>
 
-      <section class="sheet" aria-labelledby="dok-tittel">
-        <h2 id="dok-tittel" class="section-title">Dokumenter <a href="/dokumenter/">Se alle</a></h2>
-        <ul class="doc-list" role="list">
-          {%- for d in [dokumenter[0].dokumenter[0], dokumenter[5].dokumenter[0], dokumenter[3].dokumenter[0], dokumenter[4].dokumenter[0]] %}
-          {% include "partials/dokument.njk" %}
-          {%- endfor %}
-        </ul>
-      </section>
-    </div>
+  <div class="home-col">
+    <section class="home-section" aria-labelledby="kontakter-tittel">
+      <h2 id="kontakter-tittel" class="section-title">Kontakt <a href="/kontakt/">Alle kontakter</a></h2>
+      {% include "partials/kontaktliste.njk" %}
+    </section>
+
+    <section class="home-section" aria-labelledby="dok-tittel">
+      <h2 id="dok-tittel" class="section-title">Dokumenter <a href="/dokumenter/">Alle dokumenter</a></h2>
+      <ul class="doc-list" role="list">
+        {%- for d in [dokumenter[0].dokumenter[0], dokumenter[5].dokumenter[0], dokumenter[3].dokumenter[0], dokumenter[4].dokumenter[0]] %}
+        {% include "partials/dokument.njk" %}
+        {%- endfor %}
+      </ul>
+    </section>
   </div>
 </div>

@@ -16,9 +16,6 @@ layout: layouts/base.njk
 <div class="container page-layout{% if visTemaer %} has-aside{% endif %}">
   <article class="page-main"{% if not eleventyExcludeFromCollections %} data-pagefind-body{% endif %}>
     <header class="page-header">
-      {%- if ikon %}
-      <span class="page-icon"><svg class="icon" aria-hidden="true"><use href="#{{ ikon }}"/></svg></span>
-      {%- endif %}
       <h1>{{ title }}</h1>
       {%- if ingress %}
       <p class="lead">{{ ingress }}</p>
@@ -43,10 +40,7 @@ layout: layouts/base.njk
       <ul>
         {%- for t in collections.temasider %}
         <li>
-          <a href="{{ t.url }}"{% if page.url == t.url %} aria-current="page"{% endif %}>
-            {%- if t.data.ikon %}<svg class="icon" aria-hidden="true"><use href="#{{ t.data.ikon }}"/></svg>{% endif %}
-            <span>{{ t.data.title }}</span>
-          </a>
+          <a href="{{ t.url }}"{% if page.url == t.url %} aria-current="page"{% endif %}>{{ t.data.title }}</a>
         </li>
         {%- endfor %}
       </ul>

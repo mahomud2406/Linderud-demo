@@ -7,31 +7,23 @@ ingress: Kontaktinformasjon og skjema for å sende melding.
 <ul class="contact-cards" role="list">
   {%- for k in kontakter.personer %}
   <li class="sheet contact-card" id="{{ k.id }}">
-    <header>
-      <span class="avatar"><svg class="icon" aria-hidden="true"><use href="#{{ k.ikon }}"/></svg></span>
-      <div>
-        <h2>{{ k.rolle }}</h2>
-        {%- if k.navn %}<p class="contact-name">{{ k.navn }}</p>{% endif %}
-      </div>
-    </header>
+    <h2>{{ k.rolle }}</h2>
+    {%- if k.navn %}<p class="contact-name">{{ k.navn }}</p>{% endif %}
     {%- if k.beskrivelse %}<p class="contact-desc">{{ k.beskrivelse }}</p>{% endif %}
-    <div class="contact-actions">
+    <dl class="contact-details">
       {%- if k.telefon %}
-      <a class="button" href="tel:{{ k.telefon | telLenke }}">
-        <svg class="icon" aria-hidden="true"><use href="#i-telefon"/></svg>{{ k.telefon }}
-      </a>
+      <dt>Telefon{% if k.telefonMerknad %} ({{ k.telefonMerknad }}){% endif %}</dt>
+      <dd><a href="tel:{{ k.telefon | telLenke }}">{{ k.telefon }}</a></dd>
       {%- endif %}
       {%- if k.epost %}
-      <a class="button button-outline" href="mailto:{{ k.epost }}">
-        <svg class="icon" aria-hidden="true"><use href="#i-epost"/></svg>{{ k.epost }}
-      </a>
+      <dt>E-post</dt>
+      <dd><a href="mailto:{{ k.epost }}">{{ k.epost }}</a></dd>
       {%- endif %}
       {%- if k.nettside %}
-      <a class="button button-outline" href="{{ k.nettside }}">
-        <svg class="icon" aria-hidden="true"><use href="#i-ekstern"/></svg>Nettside
-      </a>
+      <dt>Nettside</dt>
+      <dd><a href="{{ k.nettside }}">{{ k.nettside | replace("http://", "") | replace("https://", "") }}</a></dd>
       {%- endif %}
-    </div>
+    </dl>
   </li>
   {%- endfor %}
 </ul>

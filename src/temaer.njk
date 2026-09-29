@@ -19,7 +19,6 @@ permalink: /temaer/
   {%- for t in collections.temasider %}
   <li>
     <a class="topic-card" href="{{ t.url }}">
-      <span class="avatar"><svg class="icon" aria-hidden="true"><use href="#{{ t.data.ikon }}"/></svg></span>
       <span>
         <strong>{{ t.data.title }}</strong>
         {%- if t.data.kort %}<small>{{ t.data.kort }}</small>{% endif %}

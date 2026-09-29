@@ -79,5 +79,5 @@ npm start       # lokal forhåndsvisning på http://localhost:8080
 npm run build   # bygger til _site/ og lager søkeindeks
 ```
 
-Bygget med [Eleventy](https://www.11ty.dev/), [Pagefind](https://pagefind.app/) (søk) og skrifttypen Nunito (lagret lokalt).
+Bygget med [Eleventy](https://www.11ty.dev/), [Pagefind](https://pagefind.app/) (søk) og skrifttypen Poppins (lagret lokalt).
 Ingen informasjonskapsler, analyseverktøy eller innhold fra tredjeparter.
