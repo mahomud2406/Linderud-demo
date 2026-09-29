@@ -7,12 +7,6 @@ rekkefolge: 1
 kilde: http://linderudbo.no/L2/Garasjer-Parkering.html
 ---
 
-<ul class="facts">
-  <li><strong>173</strong><span>garasjer</span></li>
-  <li><strong>100</strong><span>faste parkeringsplasser</span></li>
-  <li><strong>19</strong><span>plasser for gjesteparkering</span></li>
-</ul>
-
 - Garasjer og parkeringsplasser administreres av Styret i Linderud Borettslag II, e-post: [GPL2@Linderudbo.no](mailto:GPL2@Linderudbo.no)
 - Kort for gjesteparkering og korttids P-tillatelse for gårdsplasser: Vaktmester Pål Schøyen, tel. [971 99923](tel:+4797199923)
 

@@ -488,14 +488,6 @@ main:focus {
   white-space: nowrap;
 }
 
-.eyebrow {
-  margin: 0 0 0.35rem;
-  color: var(--muted);
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
 /* Siste oppslag */
 .notice {
   padding: 1.5rem;
@@ -506,6 +498,13 @@ main:focus {
   .notice {
     padding: 2rem 2.25rem;
   }
+}
+
+.notice time {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--muted);
+  font-size: 0.875rem;
 }
 
 .notice h2 {
@@ -1024,10 +1023,8 @@ main:focus {
 
 .side-list-title {
   margin: 0 0 0.5rem;
-  color: var(--muted);
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 0.925rem;
+  font-weight: 500;
 }
 
 .side-list ul {

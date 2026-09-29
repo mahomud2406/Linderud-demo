@@ -7,12 +7,6 @@ rekkefolge: 5
 kilde: http://linderudbo.no/TV/TV_Fellesavtale.html
 ---
 
-<ul class="facts">
-  <li><strong>344</strong><span>husstander</span></li>
-  <li><strong>40</strong><span>poeng til valg av kanaler og/eller strømmetjenester</span></li>
-  <li><strong>336 kr</strong><span>pr. leilighet pr. måned</span></li>
-</ul>
-
 ## Fellesavtale for TV-pakke
 
 - Telia (tidligere Get) er TV-leverandør til Linderud Borettslag II siden april 2019.

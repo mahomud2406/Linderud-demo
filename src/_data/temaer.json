@@ -1,21 +1,42 @@
 [
-  { "tittel": "Garasje og parkering", "url": "/temaer/parkering/" },
-  { "tittel": "Gjesteparkering", "url": "/temaer/gjesteparkering/" },
-  { "tittel": "Elbil", "url": "/temaer/elbil/" },
-  { "tittel": "Vaskeri", "url": "/temaer/vaskeri/" },
-  { "tittel": "TV og radio", "url": "/temaer/tv/" },
-  { "tittel": "Kanaloversikt", "url": "/temaer/tv/#kanaler" },
-  { "tittel": "Internett og fiber", "url": "/temaer/internett/" },
-  { "tittel": "Driftsmeldinger", "url": "/temaer/driftsmeldinger/" },
-  { "tittel": "Styret", "url": "/temaer/styret/" },
-  { "tittel": "Vaktmester", "url": "/kontakt/#vaktmester" },
-  { "tittel": "Ordensregler", "url": "/temaer/ordensregler/" },
-  { "tittel": "Regelverk", "url": "/temaer/regelverk/" },
-  { "tittel": "Oppussing", "url": "/temaer/oppussing/" },
-  { "tittel": "Styret informerer", "url": "/dokumenter/#styret-informerer" },
-  { "tittel": "Årsberetning og regnskap", "url": "/dokumenter/#arsberetninger" },
-  { "tittel": "Generalforsamling", "url": "/dokumenter/#generalforsamling" },
-  { "tittel": "Forretningsfører", "url": "/kontakt/#forretningsforer" },
-  { "tittel": "Om borettslaget", "url": "/temaer/borettslaget/" },
-  { "tittel": "Kontakt styret", "url": "/kontakt/#skriv" }
+  {
+    "tittel": "Garasje og parkering",
+    "url": "/temaer/parkering/"
+  },
+  {
+    "tittel": "Gjesteparkering",
+    "url": "/temaer/gjesteparkering/"
+  },
+  {
+    "tittel": "Elbil",
+    "url": "/temaer/elbil/"
+  },
+  {
+    "tittel": "Vaskeri",
+    "url": "/temaer/vaskeri/"
+  },
+  {
+    "tittel": "TV og radio",
+    "url": "/temaer/tv/"
+  },
+  {
+    "tittel": "Internett og fiber",
+    "url": "/temaer/internett/"
+  },
+  {
+    "tittel": "Styret",
+    "url": "/temaer/styret/"
+  },
+  {
+    "tittel": "Regelverk",
+    "url": "/temaer/regelverk/"
+  },
+  {
+    "tittel": "Oppussing",
+    "url": "/temaer/oppussing/"
+  },
+  {
+    "tittel": "Om borettslaget",
+    "url": "/temaer/borettslaget/"
+  }
 ]

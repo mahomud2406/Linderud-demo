@@ -5,16 +5,7 @@ title: Temaer
 ingress: Finn informasjon om det du lurer på.
 permalink: /temaer/
 ---
-<section class="sheet" aria-label="Populære temaer">
-<ul class="chips" role="list">
-  {%- for t in temaer %}
-  <li><a class="chip" href="{{ t.url }}">{{ t.tittel }}</a></li>
-  {%- endfor %}
-</ul>
-</section>
-
-<section class="sheet" aria-labelledby="alle-temaer">
-<h2 id="alle-temaer" class="section-title">Alle temaer</h2>
+<section aria-label="Alle temaer">
 <ul class="topic-cards" role="list">
   {%- for t in collections.temasider %}
   <li>
