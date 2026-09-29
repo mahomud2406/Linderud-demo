@@ -20,6 +20,10 @@
       <a class="appbar-btn" href="/sok/" aria-label="Søk">
         <svg class="icon" aria-hidden="true"><use href="#i-sok"/></svg>
       </a>
+      <a class="appbar-btn appbar-bell" href="/oppslag/" aria-label="Oppslag">
+        <svg class="icon" aria-hidden="true"><use href="#i-bjelle"/></svg>
+        {%- if collections.nyheter | length %}<span class="appbar-dot" aria-hidden="true"></span>{% endif %}
+      </a>
     </div>
   </div>
 </header>
