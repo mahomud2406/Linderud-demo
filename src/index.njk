@@ -3,12 +3,10 @@ layout: layouts/base.njk
 title: Forside
 bodyClass: home
 ---
-<section class="home-hero" aria-labelledby="borettslaget">
-  <img class="home-hero-img" src="/assets/img/LBR2.jpg" alt="" width="1024" height="318" fetchpriority="high">
-  <div class="home-hero-text container">
-    <h1 id="borettslaget">{{ site.borettslag }}</h1>
-    <p>{{ site.adresse }}</p>
-  </div>
+<section class="home-hero container" aria-labelledby="borettslaget">
+  <h1 id="borettslaget">{{ site.borettslag }}</h1>
+  <p>{{ site.adresse }}</p>
+  <img class="home-hero-img" src="/assets/img/LBR2.jpg" alt="De fire boligblokkene i Linderud Borettslag II" width="1024" height="318" fetchpriority="high">
 </section>
 
 <nav class="home-quick" aria-label="Snarveier på forsiden">

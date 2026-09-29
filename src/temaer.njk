@@ -5,16 +5,23 @@ title: Temaer
 ingress: Finn informasjon om det du lurer på.
 permalink: /temaer/
 ---
-<section aria-label="Alle temaer">
+<section aria-label="Populære temaer">
+<ul class="chips" role="list">
+  {%- for t in temaer %}
+  <li><a class="chip" href="{{ t.url }}">{{ t.tittel }}</a></li>
+  {%- endfor %}
+</ul>
+</section>
+
+<section class="topic-section" aria-labelledby="alle-temaer">
+<h2 id="alle-temaer">Alle temaer</h2>
 <ul class="topic-cards" role="list">
   {%- for t in collections.temasider %}
   <li>
     <a class="topic-card" href="{{ t.url }}">
-      <span>
-        <strong>{{ t.data.title }}</strong>
-        {%- if t.data.kort %}<small>{{ t.data.kort }}</small>{% endif %}
-      </span>
-      <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+      {%- if t.data.ikon %}<svg class="icon" aria-hidden="true"><use href="#{{ t.data.ikon }}"/></svg>{% endif %}
+      <strong>{{ t.data.title }}</strong>
+      {%- if t.data.kort %}<small>{{ t.data.kort }}</small>{% endif %}
     </a>
   </li>
   {%- endfor %}
