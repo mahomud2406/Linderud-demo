@@ -1,7 +1,7 @@
 ---
 title: Garasjer og parkering
 ingress: Borettslaget har 173 garasjer, 100 faste parkeringsplasser og 19 plasser for gjesteparkering.
-ikon: i-bil
+ikon: i-garasje
 kort: Garasjer, faste plasser, gårdsplasser og gebyrer
 rekkefolge: 1
 kilde: http://linderudbo.no/L2/Garasjer-Parkering.html
